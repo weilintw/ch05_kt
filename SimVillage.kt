@@ -1,8 +1,9 @@
-/*c5-1 定義一個匿名函數
+/*c5-2 把匿名函數設定給變數
 */
 fun main(){
-    println({
+    val greetingFunction: () -> String = {
         val currentYear = 2021
         "歡迎蒞臨 SimVillage，鎮長！ (copyright $currentYear)"
-    }())
+    }
+    println(greetingFunction())
 }
