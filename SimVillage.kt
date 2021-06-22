@@ -1,9 +1,11 @@
-/*c5-4 使用it代替參數名
+/*c5-5 再增加一個參數
 */
 fun main(){
-    val greetingFunction: (String) -> String = {
+    val greetingFunction: (String,Int) -> String = {
+        playerName,numBuildings ->
         val currentYear = 2021
-        "歡迎蒞臨 SimVillage，$it！ (copyright $currentYear)"
+        println("新建 $numBuildings 棟房屋")
+        "歡迎蒞臨 SimVillage，$playerName！ (copyright $currentYear)"
     }
-    println(greetingFunction("wl"))
+    println(greetingFunction("wl",2))
 }
