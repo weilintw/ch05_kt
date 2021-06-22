@@ -1,8 +1,8 @@
-/*c5-5 再增加一個參數
+/*c5-6 使用類型推斷
 */
 fun main(){
-    val greetingFunction: (String,Int) -> String = {
-        playerName,numBuildings ->
+    val greetingFunction = {
+        playerName: String,numBuildings: Int ->
         val currentYear = 2021
         println("新建 $numBuildings 棟房屋")
         "歡迎蒞臨 SimVillage，$playerName！ (copyright $currentYear)"
