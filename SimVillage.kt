@@ -1,10 +1,9 @@
-/*c5-3 為匿名函數增加玩家參數
+/*c5-4 使用it代替參數名
 */
 fun main(){
     val greetingFunction: (String) -> String = {
-        playerName ->
         val currentYear = 2021
-        "歡迎蒞臨 SimVillage，$playerName！ (copyright $currentYear)"
+        "歡迎蒞臨 SimVillage，$it！ (copyright $currentYear)"
     }
     println(greetingFunction("wl"))
 }
