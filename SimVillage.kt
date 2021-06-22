@@ -1,8 +1,7 @@
-/*c5-11 增加costPrinter函數參數
-此程式在叫用runSimulation時會報錯，因須要傳入另一個Lambda
+/*c5-12 傳遞 printConstructionCost 函數參照
 */
 fun main(){
-    runSimulation("wl"){
+    runSimulation("wl",::printConstructionCost){
         playerName, numBuildings ->
         val currentYear = 2021
         println("新建 $numBuildings 棟房屋")
@@ -17,5 +16,5 @@ inline fun runSimulation(playerName: String,
 }
 fun printConstructionCost(numBuildings: Int){
     val cost = 500
-    println("建造成本： ${cost * numBuildings}")
+    println("建造成本：${cost * numBuildings}")
 }
