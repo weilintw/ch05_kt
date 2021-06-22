@@ -1,11 +1,12 @@
-/*c5-13 增加configuraGreetingFunction函數
+/*c5-14 在 runSimulation 呼叫 greetingFunction 兩次
 */
 fun main(){
     runSimulation()
 }
-inline fun runSimulation(){
+fun runSimulation(){
     val greetingFunction = configureGreetingFunction()
-    println(greetingFunction("wl"))
+    println(greetingFunction("wl"))  //看到的變數
+    println(greetingFunction("wl"))  //記錄在做一次
 }
 fun configureGreetingFunction(): (String) -> String {
     val structureType = "醫院"
